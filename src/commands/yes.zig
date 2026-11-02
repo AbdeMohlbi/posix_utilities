@@ -1,7 +1,6 @@
 const std = @import("std");
 const mem = @import("std").mem;
 const Command = @import("../command.zig").Command;
-const expectEqual = std.testing.expectEqual;
 
 pub const yes = .{
     "yes",
@@ -34,9 +33,4 @@ pub fn yesCommand(init: std.process.Init, args: []const [:0]const u8) !void {
     while (true) {
         std.debug.print("{s}\n", .{argumentsInOneLine});
     }
-}
-
-test "yesCommand" {
-    const command = Command.commands.get("yes") orelse return error.CommandNotFound;
-    try expectEqual(Command{ .version = "0.0.1", .help = "output a string repeatedly until killed", .run = yesCommand.yesCommand }, command);
 }

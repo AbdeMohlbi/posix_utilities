@@ -14,5 +14,5 @@ pub fn add(a: i32, b: i32) i32 {
 }
 
 test "basic add functionality" {
-    try std.testing.expect(add(2, 7) == 10);
+    try std.testing.expect(add(3, 7) == 10);
 }

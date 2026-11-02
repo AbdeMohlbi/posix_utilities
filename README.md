@@ -5,9 +5,15 @@ This repo contains some of the [POSIX commands](https://en.wikipedia.org/wiki/Li
 
 - zig [0.17](https://ziglang.org/)
 
+### to build and run all the tests
+```shell
+zig build test  --summary all
+``` 
+
 ### specs
 Each command can accept `--help` and `--version` as special arguments in which for `--help` a simple explination or instrucrtion for the command will be displayed, for `--version` this prints information about the commands version.
 
 List of the currently implemented versions:
 
 - [x] yes
+- [x] list
