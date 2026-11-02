@@ -23,6 +23,6 @@ pub fn main(init: std.process.Init) !void {
                 unreachable;
             }
         },
-        else => std.log.warn("Sorrym the maximun allowed number of arguments is 7", .{}),
+        else => std.log.warn("Sorry, the maximun allowed number of arguments is 7", .{}),
     }
 }
