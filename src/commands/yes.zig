@@ -10,6 +10,12 @@ pub const yes = .{
 };
 
 pub fn yesCommand(init: std.process.Init, args: []const [:0]const u8) !void {
+    // meaning that it was invoked by ./bin yes
+    if (args.len == 2) {
+        while (true) {
+            std.debug.print("y\n", .{});
+        }
+    }
 
     // if the first argument is --help
     if (std.mem.eql(u8, args[2], "--help")) {
